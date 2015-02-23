@@ -34,7 +34,6 @@ test('entering an author name and method activates the button', function (assert
   visit('/').then(function () {
     fillIn('.message-author input[type=text]', 'Author');
     fillIn('.message-body input[type=text]', 'Body');
-
     andThen(function () {
       assert.ok(!find('input[type=submit]').prop('disabled'), 'The submit button is enabled.');
     });

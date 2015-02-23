@@ -4,7 +4,7 @@
   font-weight: 300;
 }
 
-body.ember-application {
+.ember-application {
   background: url('/color-pattern.svg') right 200px top 100px no-repeat,
               url('/bg-dark.png');
 }
