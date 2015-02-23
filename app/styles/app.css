@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: url('/color-pattern.svg') right 200px top 100px no-repeat,
+              url('/bg-dark.png');
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+header {
+  color: rgb(255, 255, 255);
+}
+
+header img {
+  max-width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.messages, .message-input {
+  margin: 1em 0 0 0;
+  border: 10px solid rgba(65, 68, 68, 30);
+  background: url('/bg-light.png');
+  clear: both;
+}
+
+.messages {
+  padding: 1em 0 0 0;
+}
+
+.message-input {
+  padding: 1em;
+}
+
+.messages .message {
+  margin: 0.5em 1em;
+}
+
+.messages .message-count {
+  background-color: rgba(200, 200, 200, 10);
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.author::after {
+  content: ':';
+  padding-right: 0.5em;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: 400;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.5em;
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+input[type=text] {
+  background-color: rgba(255, 255, 255, 90);
+}
+
+input[type=submit] {
+  margin: 1em 0;
+  background-color: rgb(225, 76, 49);
+  color: rgb(255, 255, 255);
+}
+
+input[type=submit]:hover {
+  background-color: rgb(217, 60, 32);
+}
+
+input[type=submit]:disabled {
+  background-color: rgb(169, 169, 169);
+}

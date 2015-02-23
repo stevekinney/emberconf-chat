@@ -1,0 +1,27 @@
+<section class="messages">
+  {{#each message in content}}
+  <div class="message">
+    <span class="author">{{message.author}}</span>
+    <span class="content">{{message.body}}</span>
+  </div>
+  {{/each}}
+  <div class="message-count">
+    Message Count: {{messageCount}}
+  </div>
+</section>
+
+<form class="message-input">
+  <div class="message-author">
+    <label>Your Name</label>
+    {{input type="text" value=author}}
+  </div>
+  <div class="message-content">
+    <label>Message</label>
+    {{input type="text" value=body}}
+  </div>
+  <div class="message-submit">
+    <input type="submit"
+      {{bind-attr disabled=submissionIsInvalid}}
+      {{action 'submitMessage'}}>
+  </div>
+</form>
