@@ -21,7 +21,8 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV.contentSecurityPolicy = {
-      'connect-src': "'self' ws://localhost:8080",
+      'connect-src': "'self' *",
+      'script-src': "'self' *"
     };
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
