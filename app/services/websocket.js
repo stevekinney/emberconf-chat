@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Object.extend({
   _setup: function () {
     let websocket = this.websocket = new WebSocket('ws://localhost:8080');
 

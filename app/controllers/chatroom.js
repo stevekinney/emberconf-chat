@@ -1,15 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['websocket'],
-
-  websocket: Ember.computed.alias('controllers.websocket'),
 
   author: null,
   body: null,
 
   submissionIsValid: Ember.computed.and('author', 'body'),
   submissionIsInvalid: Ember.computed.not('submissionIsValid'),
+
+  websocket: Ember.inject.service(),
 
   messageCount: function () {
     return this.get('content').length;
