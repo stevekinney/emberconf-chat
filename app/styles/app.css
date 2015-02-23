@@ -4,7 +4,7 @@
   font-weight: 300;
 }
 
-body {
+body.ember-application {
   background: url('/color-pattern.svg') right 200px top 100px no-repeat,
               url('/bg-dark.png');
 }
@@ -58,13 +58,13 @@ header img {
   padding-right: 0.5em;
 }
 
-label {
+.message-input label {
   display: block;
   margin: 0.5em 0;
   font-weight: 400;
 }
 
-input {
+.message-input input {
   font-size: 1em;
   padding: 0.5em;
   width: 100%;
@@ -72,17 +72,17 @@ input {
   border: none;
 }
 
-input[type=text] {
+.message-input input[type=text] {
   background-color: rgba(255, 255, 255, 90);
 }
 
-input[type=submit] {
+.message-input input[type=submit] {
   margin: 1em 0;
   background-color: rgb(225, 76, 49);
   color: rgb(255, 255, 255);
 }
 
-input[type=submit]:hover {
+.message-input input[type=submit]:hover {
   background-color: rgb(217, 60, 32);
 }
 

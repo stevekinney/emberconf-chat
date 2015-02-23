@@ -9,7 +9,20 @@ moduleFor('controller:chatroom', {
 });
 
 // Replace this with your real tests.
-test('it exists', function(assert) {
+test('submission is invalid if author or body is missing', function(assert) {
   var controller = this.subject();
-  assert.ok(controller);
+  controller.setProperties({
+    author: null,
+    body: null
+  });
+  assert.ok(controller.get('submissionIsInvalid'));
+});
+
+test('submission is valid if author or body is missing', function(assert) {
+  var controller = this.subject();
+  controller.setProperties({
+    author: 'Author',
+    body: 'Body'
+  });
+  assert.ok(controller.get('submissionIsValid'));
 });
