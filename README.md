@@ -14,3 +14,6 @@ This project relies on [stevekinney/socketry-server][server] and is loosely base
 [server]: https://github.com/stevekinney/socketry-server
 [client]: https://github.com/stevekinney/socketry-client
 [denver]: http://www.meetup.com/Ember-js-Denver/events/215907412/
+
+
+![EmberConf Chat Demo](https://cloud.githubusercontent.com/assets/251000/6340926/c849a4e4-bb81-11e4-9dea-67ff26484c47.gif)
