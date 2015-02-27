@@ -12,11 +12,11 @@ export default Ember.Controller.extend({
   submissionIsInvalid: Ember.computed.not('submissionIsValid'),
 
   messageCount: function () {
-    return this.get('content').length;
-  }.property('content.[]'),
+    return this.get('model').length;
+  }.property('model.[]'),
 
   receiveMessage: function (message) {
-    this.get('content').pushObject(message);
+    this.get('model').pushObject(message);
   },
 
   subscribe: function () {
