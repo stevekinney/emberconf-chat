@@ -1,5 +1,5 @@
 <section class="messages">
-  {{#each message in content}}
+  {{#each model as |message|}}
   <div class="message">
     <span class="author">{{message.author}}</span>
     <span class="content">{{message.body}}</span>
