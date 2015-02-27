@@ -11,11 +11,11 @@ export default Ember.Controller.extend({
   websocket: Ember.inject.service(),
 
   messageCount: function () {
-    return this.get('content').length;
-  }.property('content.[]'),
+    return this.get('model').length;
+  }.property('model.[]'),
 
   receiveMessage: function (message) {
-    this.get('content').pushObject(message);
+    this.get('model').pushObject(message);
   },
 
   subscribe: function () {
