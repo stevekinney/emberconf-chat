@@ -1,22 +1,23 @@
+/* global io */
+
 import Ember from 'ember';
 
 export default Ember.Object.extend({
   _setup: function () {
-    let hostname = window.location.hostname;
-    let websocket = this.websocket = new WebSocket('ws://%@:8080'.fmt(hostname));
+    let socket = this.socket = io(`${window.location.hostname}:8080`);
 
     this.subscribers = [];
 
-    websocket.onmessage = function (event) {
+    socket.on('message', function (data) {
       if (!this.subscribers) { return; }
-      let message = JSON.parse(event.data);
+      let message = JSON.parse(data);
       this.subscribers.forEach( (callback) => callback(message) );
-    }.bind(this);
+    }.bind(this));
 
   }.on('init'),
 
   sendMessage: function (message) {
-    this.websocket.send(message);
+    this.socket.emit('message', message);
   },
 
   subscribe: function (callback) {
