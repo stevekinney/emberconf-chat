@@ -7,11 +7,11 @@ export default Ember.Object.extend({
 
     this.subscribers = [];
 
-    websocket.onmessage = function (event) {
+    websocket.onmessage = (event) => {
       if (!this.subscribers) { return; }
       let message = JSON.parse(event.data);
       this.subscribers.forEach( (callback) => callback(message) );
-    }.bind(this);
+    };
 
   }.on('init'),
 
